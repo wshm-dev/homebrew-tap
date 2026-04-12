@@ -1,35 +1,24 @@
-# typed: false
-# frozen_string_literal: true
-
-# Homebrew formula for wshm — AI-powered GitHub agent
-# Install: brew tap wshm-dev/tap && brew install wshm
 class Wshm < Formula
-  desc "AI-powered GitHub agent for repository maintenance"
+  desc "AI-powered repository agent for GitHub, GitLab, Gitea, Azure DevOps"
   homepage "https://wshm.dev"
-  version "0.25.0"
+  version "0.27.0"
   license "SSPL-1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/wshm-dev/wshm/releases/download/v#{version}/wshm-x86_64-apple-darwin.tar.gz"
-      sha256 "PLACEHOLDER_SHA256_MACOS_INTEL"
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-x86_64-apple-darwin.tar.gz"
+      sha256 ""
     end
-
     on_arm do
-      url "https://github.com/wshm-dev/wshm/releases/download/v#{version}/wshm-aarch64-apple-darwin.tar.gz"
-      sha256 "PLACEHOLDER_SHA256_MACOS_ARM"
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-aarch64-apple-darwin.tar.gz"
+      sha256 ""
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/wshm-dev/wshm/releases/download/v#{version}/wshm-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "PLACEHOLDER_SHA256_LINUX_INTEL"
-    end
-
-    on_arm do
-      url "https://github.com/wshm-dev/wshm/releases/download/v#{version}/wshm-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "PLACEHOLDER_SHA256_LINUX_ARM"
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b1fa602ec38b1e3fa68266dc7272d295710522dc716999b45ca7077236c70d1e"
     end
   end
 
@@ -38,6 +27,6 @@ class Wshm < Formula
   end
 
   test do
-    assert_match "wshm #{version}", shell_output("#{bin}/wshm --version")
+    assert_match "wshm", shell_output("#{bin}/wshm --version")
   end
 end
