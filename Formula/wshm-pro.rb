@@ -7,7 +7,11 @@ class WshmPro < Formula
   on_linux do
     on_intel do
       url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.28.1-pro/wshm-pro-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f7f8499b304617f06d6e4513d28eddf4cad925e5f64318b06e318593391014e8"
+      sha256 "62dd53bcc3083ad5955155225eb1fe16bbc28887a13705ab82c913410cf917b1"
+    end
+    on_arm do
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.28.1-pro/wshm-pro-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 ""
     end
   end
 
