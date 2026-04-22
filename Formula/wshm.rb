@@ -1,24 +1,17 @@
 class Wshm < Formula
-  desc "AI-powered repository agent for GitHub, GitLab, Gitea, Azure DevOps"
+  desc "AI-powered GitHub agent — triage, PR analysis, merge queue"
   homepage "https://wshm.dev"
-  version "0.27.0"
+  version "0.28.1"
   license "SSPL-1.0"
-
-  on_macos do
-    on_intel do
-      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-x86_64-apple-darwin.tar.gz"
-      sha256 ""
-    end
-    on_arm do
-      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-aarch64-apple-darwin.tar.gz"
-      sha256 ""
-    end
-  end
 
   on_linux do
     on_intel do
-      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.27.0/wshm-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b1fa602ec38b1e3fa68266dc7272d295710522dc716999b45ca7077236c70d1e"
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.28.1/wshm-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "70ebfb55974797bef3689700ede3e3be54fca0206b0f27c0b1cde64aaba1d607"
+    end
+    on_arm do
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.28.1/wshm-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e1bafd3e640d7009ae8b487bfecc067d6bdfd98574a9bf8371c465d3f72f41df"
     end
   end
 
@@ -27,6 +20,6 @@ class Wshm < Formula
   end
 
   test do
-    assert_match "wshm", shell_output("#{bin}/wshm --version")
+    assert_match version.to_s, shell_output("#{bin}/wshm --version")
   end
 end
