@@ -2,7 +2,10 @@
 
 Homebrew tap for [wshm](https://github.com/wshm-dev/wshm) — AI-powered GitHub agent.
 
-## Install
+> **Linux only.** This tap provides binaries for Linux x86_64 and Linux ARM64.
+> macOS is not supported at this time. Windows users should use the direct binary from the [Releases](https://github.com/wshm-dev/wshm/releases) page.
+
+## Install (Linux)
 
 ```bash
 brew tap wshm-dev/tap
