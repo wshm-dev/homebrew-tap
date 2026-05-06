@@ -1,17 +1,17 @@
 class Wshm < Formula
   desc "AI-powered GitHub agent — triage, PR analysis, merge queue"
   homepage "https://wshm.dev"
-  version "0.29.0"
+  version "0.30.0"
   license "SSPL-1.0"
 
   on_linux do
     on_intel do
-      url "https://github.com/wshm-dev/wshm/releases/download/v0.29.0/wshm-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5f3fc013b5710637b117060bb15ae855fc0c136392066d2238741e59db137f60"
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.30.0/wshm-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9683543b11749a01e1f4e5e50e7539bc06d930fa40fde15089ec808188adfc9f"
     end
     on_arm do
-      url "https://github.com/wshm-dev/wshm/releases/download/v0.29.0/wshm-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8ce7f46d833f07a0d62ef7dabad32b432e11f1a18f9884efc2919472e8661ce8"
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.30.0/wshm-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "80d2f48a40c5331e23930dc53c9d18ab71af10b36c1d05c116797bf76f57b420"
     end
   end
 
