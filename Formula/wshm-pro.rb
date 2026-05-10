@@ -1,17 +1,17 @@
 class WshmPro < Formula
   desc "AI-powered repository agent — PR corrections, changelogs, reports"
   homepage "https://wshm.dev"
-  version "0.31.6-pro"
+  version "0.31.7-pro"
   license "LicenseRef-Proprietary"
 
   on_linux do
     on_intel do
-      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.31.6-pro/wshm-pro-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fd1612255ac4d62dccd938886be01b74da2eb8b4f30f2ae88942711b22e90e4d"
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.31.7-pro/wshm-pro-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "255f2e7ff1c5025f28c1902e86fd42b3d0c5fc898425fb4a76b24dc7388fa1cb"
     end
     on_arm do
-      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.31.6-pro/wshm-pro-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b9d44df50e9b1322850cd83bc49ed6dc1f6f5c441d10d5f943747a3b43cf3d19"
+      url "https://github.com/wshm-dev/homebrew-tap/releases/download/v0.31.7-pro/wshm-pro-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "43d80fc01881ed1e304b2c5277eac6765e9e31119700e3794591a96aa9d960a5"
     end
   end
 
