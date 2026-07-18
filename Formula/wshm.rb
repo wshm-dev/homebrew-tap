@@ -1,22 +1,28 @@
 class Wshm < Formula
   desc "AI-powered GitHub agent — triage, PR analysis, merge queue"
   homepage "https://wshm.dev"
-  url "https://github.com/wshm-dev/wshm/releases/download/v0.31.5/wshm-x86_64-unknown-linux-gnu.tar.gz"
-  version "0.31.5"
-  sha256 "e97c2614f97972bc0004a1c8cf5974f2ac1264c4c7a65f0d5d161dab97d9a883"
+  version "0.31.7"
   license "SSPL-1.0"
 
-  # wshm ships prebuilt binaries for Linux only. A stable url must exist for the
-  # formula to load on every platform; depends_on :linux then makes brew refuse
-  # installation on macOS with a clear "Linux is required" message instead of a
-  # cryptic "formula requires at least a URL" load error. The requirement is
-  # enforced before any download, so this Linux tarball is never fetched on macOS.
-  depends_on :linux
+  on_macos do
+    on_arm do
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.31.7/wshm-aarch64-apple-darwin.tar.gz"
+      sha256 "3f621b957a24a73ae45ef68e3cef98cb9cc06f538e0e4b92ff47c637b3c99a1d"
+    end
+    on_intel do
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.31.7/wshm-x86_64-apple-darwin.tar.gz"
+      sha256 "076aaad71d38fd8ab953a220934c74b27b0578cebed59b2efe49b66edf614afa"
+    end
+  end
 
   on_linux do
+    on_intel do
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.31.7/wshm-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "79c9e172f3a02935365d300f3c0a9d3b778a5c9eed5806b98186fc394f7fd463"
+    end
     on_arm do
-      url "https://github.com/wshm-dev/wshm/releases/download/v0.31.5/wshm-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b1449ad6584dc2e9e5dafbfed0e63c603057d5c1770425c669a3b4b6c45e8168"
+      url "https://github.com/wshm-dev/wshm/releases/download/v0.31.7/wshm-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "ef00f8eb04a41cc2a2468afd28a95152947c48cd55d4636af0ee881f076a9dfa"
     end
   end
 
